@@ -8,6 +8,7 @@
 
 - **_Backend:_** TypeScript, Node.js, express.js, mongoDB, mongoose, zod
 - **_Frontend:_** TypeScript, React, Redux-toolkit, Ant-design, zod, recharts, react-hook-form, sweetalert2, react-router-dom
+- **_DevOps:_** Docker, Docker Compose, MongoDB containerized
 
 # Features
 
@@ -52,7 +53,71 @@
 <img src='./asset/4.png'>
 <img src='./asset/5.png'>
 
-### How to run application locally
+## 🚀 Docker Quick Start (Recommended)
+
+The easiest way to run this application is using Docker. This method requires **no local installations** of Node.js, MongoDB, or any other dependencies.
+
+### Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your machine
+
+### Quick Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mhShohan/inventory-management-system.git
+   cd inventory-management-system
+   ```
+
+2. **Create environment file**
+   ```bash
+   cp .env.docker .env
+   ```
+
+3. **Start the application**
+   ```bash
+   docker-compose up -d
+   ```
+
+4. **Access the application**
+   - **Frontend:** http://localhost:3000
+   - **Backend API:** http://localhost:8000
+   - **MongoDB:** localhost:27017
+
+### Docker Commands
+
+```bash
+# Start all services (development mode)
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop all services
+docker-compose down
+
+# Rebuild and start
+docker-compose up --build -d
+
+# Start production mode
+docker-compose -f docker-compose.prod.yml up -d
+
+# Clean up (remove containers and volumes)
+docker-compose down -v
+```
+
+### What's Included
+
+- **MongoDB 7.0** - Database with automatic initialization
+- **Backend API** - Node.js/Express server with hot reload in development
+- **Frontend** - React/Vite development server with hot reload
+- **Data Persistence** - MongoDB data persisted in Docker volumes
+
+---
+
+## 🛠️ Manual Local Setup (Alternative)
+
+If you prefer to run without Docker or want to contribute to development:
 
 1. Create a `.env` file to `client` folder and add the environment variable
 

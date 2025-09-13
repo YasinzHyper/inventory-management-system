@@ -1,0 +1,36 @@
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Docker volumes and data
+docker-data/
+mongo-data/
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache
+.parcel-cache
+.eslintcache
